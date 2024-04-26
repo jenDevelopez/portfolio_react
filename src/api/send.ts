@@ -1,5 +1,5 @@
-
 import nodemailer from 'nodemailer';
+// const process = require('process');
 
 interface EmailResponse {
   success: boolean;
@@ -13,15 +13,17 @@ interface DataProps {
 }
 export const sendEmail = async (email:string, name:string, message:string) => {
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.ionos.es",
+    port: 587,
+    secure: false, // Use `true` for port 465, `false` for all other ports
     auth: {
-      user: 'your_email@gmail.com',
-      pass: 'your_password',
+      user: process.env.SERVICE_EMAIL,
+      pass: process.env.SERVICE_PASSWORD
     },
   });
 
   const mailOptions = {
-    from: 'your_email@gmail.com',
+    from: process.env.SERVICE_EMAIL,
     to: email,
     subject: 'Contact Form Submission',
     html: `<p>Name: ${name}</p><p>Message: ${message}</p>`,
