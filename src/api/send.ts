@@ -11,7 +11,7 @@ interface DataProps {
   email:string
   message:string
 }
-export const sendEmail = async (email:string, name:string, message:string) => {
+const sendEmail = async (email:string, name:string, message:string) => {
   const transporter = nodemailer.createTransport({
     host: "smtp.ionos.es",
     port: 587,

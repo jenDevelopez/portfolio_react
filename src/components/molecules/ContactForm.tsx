@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { onSubmitEmail } from "../../api/send";
 
 interface FormDataProps {
   name: string;
@@ -10,20 +11,25 @@ interface FormDataProps {
 
 function ContactForm() {
   const {
+    handleSubmit,
     register,
     formState: { errors },
   } = useForm<FormDataProps>();
-  const [submit,setSubmit] = useState(false)
 
   useEffect(() => {
-    const sendFormByEmail = async () => {
-      const res = await fetch('../../api/send.ts',{ method: 'POST'})
-      console.log(res)
-    }
-    sendFormByEmail()
-  },[submit])
+    
+  })
+
+
   return (
-    <form className="space-y-8" onSubmit={() => setSubmit(true)}>
+    <form className="space-y-8" 
+    onSubmit={
+      (e) => {
+        e.preventDefault();
+        handleSubmit((data) => console.log(data))
+
+      }
+    }>
       <div className="lg:flex lg:justify-between">
         <div>
           <label
