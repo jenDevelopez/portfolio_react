@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { onSubmitEmail } from "../../api/send";
+// import { sendEmail } from "../../api/send";
 
 interface FormDataProps {
   name: string;
@@ -11,25 +10,36 @@ interface FormDataProps {
 
 function ContactForm() {
   const {
-    handleSubmit,
+    
     register,
+   // handleSubmit,
     formState: { errors },
   } = useForm<FormDataProps>();
 
-  useEffect(() => {
+
+    // const onSubmitForm = (data) => {
+    //   // Prevent default form submission
+    //   event.preventDefault();
     
-  })
+    //   // Send email using Nodemailer
+    //   sendEmail(data)
+    //     .then(() => {
+    //       // Handle successful email sending
+    //       console.log('Email sent successfully!');
+    //       // Clear form fields
+    //       resetForm();
+    //       // Display success message or redirect to a confirmation page
+    //     })
+    //     .catch((error) => {
+    //       console.error('Failed to send email:', error);
+    //       // Display error message
+    //     });
+    // };
+ 
 
 
   return (
-    <form className="space-y-8" 
-    onSubmit={
-      (e) => {
-        e.preventDefault();
-        handleSubmit((data) => console.log(data))
-
-      }
-    }>
+    <form className="space-y-8" >
       <div className="lg:flex lg:justify-between">
         <div>
           <label
@@ -144,6 +154,7 @@ function ContactForm() {
       </div>
     </form>
   );
+
 }
 
 export default ContactForm;

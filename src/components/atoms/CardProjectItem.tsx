@@ -36,12 +36,12 @@ function CardProject({ title, description, link, github, image, tags, className 
       </ul>
       <div className="flex gap-2">
         {github && (
-          <a href={github}>
+          <a target='_blank' href={github}>
             <FaGithub className="size-5 text-black" />
           </a>
         )}
         {link && (
-          <a href={link}>
+          <a target='_blank' href={link}>
             <FaLink className="size-5 text-blue-500" />
           </a>
         )}

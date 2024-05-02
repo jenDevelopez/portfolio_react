@@ -1,7 +1,7 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { ImGithub } from "react-icons/im";
 import { FaLinkedin } from "react-icons/fa";
-import { IoPhonePortraitSharp } from "react-icons/io5";
+import { SiWhatsapp } from "react-icons/si";
 import { IoIosMailOpen } from "react-icons/io";
 import ButtonCV from "../atoms/ButtonCV";
 import { CgClose } from "react-icons/cg";
@@ -10,11 +10,7 @@ import InfoDataItem from "../atoms/InfoDataItem";
 function Info() {
   const { setOpenNav } = useMyContext();
   const dataInfoItems = [
-    {
-      id: 1,
-      text: "652176302",
-      icon: <IoPhonePortraitSharp />,
-    },
+   
     {
       id: 2,
       text: "jendevelopez@hotmail.com",
@@ -45,12 +41,15 @@ function Info() {
             FullStack Developer
           </span>
           <div className="flex justify-center gap-3 mt-2">
-            <a className="text-black md:text-xl" href="">
+            <a target="_blank" className="text-black md:text-xl" href="https://github.com/jenDevelopez">
               <ImGithub />
             </a>
 
-            <a className="text-blue-700 md:text-xl" href="">
+            <a target="_blank" className="text-blue-700 md:text-xl" href="https://www.linkedin.com/in/jendevelopez/">
               <FaLinkedin />
+            </a>
+            <a target="_blank" className="text-green-600 md:text-xl" href="https://wa.me/34652176302" >
+              <SiWhatsapp />
             </a>
           </div>
         </div>
