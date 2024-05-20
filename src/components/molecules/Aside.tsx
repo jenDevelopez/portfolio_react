@@ -9,7 +9,7 @@ function Aside() {
     ${openNav ? 'right-4' : '-right-full'}
     ease-linear duration-300 z-[99]
     md:static 
-    lg:h-fit lg:mt-10 lg:w-1/4
+    xl:h-fit xl:mt-10 xl:w-1/4
     
     `}>
     <Info />

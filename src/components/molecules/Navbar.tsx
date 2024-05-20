@@ -34,7 +34,7 @@ function Navbar() {
      w-full p-4 bg-white rounded-xl flex justify-around items-center shadow-md
    
     md:left-10 
-    lg:w-fit lg:flex-col lg:static lg:h-1/2 
+    xl:w-fit xl:flex-col xl:static xl:h-1/2 
 
     ">
       {navButtons.map(({name,icon}) => (

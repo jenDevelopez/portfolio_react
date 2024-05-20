@@ -20,6 +20,7 @@ function Resume() {
           <div className="border-l-4 border-purple-400 pl-2 flex flex-col gap-4">
             {educacion.map(({ id, fecha, titulo, ubicacion }) => (
               <ResumeItem
+                key={id}
                 id={id}
                 fecha={fecha}
                 titulo={titulo}
@@ -38,6 +39,7 @@ function Resume() {
           <div className="border-l-4 border-purple-400 pl-2 flex flex-col gap-4">
             {experciencia.map(({ id, fecha, puesto, empresa }) => (
               <ResumeItem
+                key={id}
                 id={id}
                 fecha={fecha}
                 titulo={puesto}
@@ -57,7 +59,7 @@ function Resume() {
           </h3>
           <div className="">
             {skills.map(({ name, progress }) => (
-              <div>
+              <div key={`skill-${name}`}>
                 <p>{name}</p>
                 <ProgressBar width={progress} />
               </div>
@@ -71,3 +73,8 @@ function Resume() {
   );
 }
 export default Resume;
+
+
+
+
+

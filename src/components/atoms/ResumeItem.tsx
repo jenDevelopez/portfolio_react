@@ -9,7 +9,6 @@ interface Props{
 function ResumeItem({id,fecha,titulo,ubicacion,puesto,empresa}: Props) {
   return (
     <article 
-    key={`formacion.${id}`} 
     className={`${id % 2 === 0 ? 'bg-purple-200' : 'bg-teal-100'}
     p-2 rounded-lg before:size-3 before:rounded-full before:block before:bg-purple-400 before:relative before:top-12 before:-left-6 
     `}

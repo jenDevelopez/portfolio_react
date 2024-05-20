@@ -66,6 +66,10 @@ export const skills = [
     name: 'MySQL',
     progress: '35%'
   },
+  {
+    name: 'Node',
+    progress: '20%'
+  }
 
 ]
 

@@ -1,45 +1,39 @@
 import { useForm } from "react-hook-form";
-// import { sendEmail } from "../../api/send";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 
 interface FormDataProps {
-  name: string;
-  email: string;
-  subject: string;
+  user_name: string;
+  user_email: string;
+  
   message: string;
 }
 
 function ContactForm() {
   const {
-    
     register,
-   // handleSubmit,
+    handleSubmit,
     formState: { errors },
   } = useForm<FormDataProps>();
 
-
-    // const onSubmitForm = (data) => {
-    //   // Prevent default form submission
-    //   event.preventDefault();
-    
-    //   // Send email using Nodemailer
-    //   sendEmail(data)
-    //     .then(() => {
-    //       // Handle successful email sending
-    //       console.log('Email sent successfully!');
-    //       // Clear form fields
-    //       resetForm();
-    //       // Display success message or redirect to a confirmation page
-    //     })
-    //     .catch((error) => {
-    //       console.error('Failed to send email:', error);
-    //       // Display error message
-    //     });
-    // };
- 
-
+  const form = useRef<HTMLFormElement | null>(null);
+  const sendEmail = () => {
+   if (form.current!== null) {
+      emailjs
+       .sendForm("service_cd973sj", "template_w6zwq1w", form.current, "mrjaIJyXMGp2egXcH")
+       .then((result) => {
+          console.log(result.text);
+          location.reload()
+        })
+       .catch((error) => {
+          console.error(error.text);
+        });
+      }
+  };
 
   return (
-    <form className="space-y-8" >
+    <form ref={form} onSubmit={handleSubmit(sendEmail)} className="space-y-8" autoComplete="off">
       <div className="lg:flex lg:justify-between">
         <div>
           <label
@@ -50,10 +44,10 @@ function ContactForm() {
           </label>
           <input
             type="text"
-            id="name"
+            id="user_name"
             className="shadow-sm bg-violet-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5 placeholder:text-violet-500"
-            placeholder="John Doe"
-            {...register("name", {
+            placeholder="Tu nombre aqui..."
+            {...register("user_name", {
               required: {
                 value: true,
                 message: "Tienes que poner tu nombre",
@@ -68,8 +62,8 @@ function ContactForm() {
               },
             })}
           />
-          {errors.name && (
-            <span className="text-red-500 text-xs">{errors.name.message}</span>
+          {errors.user_name && (
+            <span className="text-red-500 text-xs">{errors.user_name.message}</span>
           )}
         </div>
         <div>
@@ -81,10 +75,10 @@ function ContactForm() {
           </label>
           <input
             type="email"
-            id="email"
+            id="user_email"
             className="shadow-sm bg-violet-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5 d placeholder:text-violet-500"
-            placeholder="name@developez.es"
-            {...register("email", {
+            placeholder="Tu email aqui..."
+            {...register("user_email", {
               required: {
                 value: true,
                 message: "Tienes que poner tu email",
@@ -95,34 +89,10 @@ function ContactForm() {
               },
             })}
           />
-          {errors.email && (
-            <span className="text-red-500 text-xs">{errors.email.message}</span>
+          {errors.user_email && (
+            <span className="text-red-500 text-xs">{errors.user_email.message}</span>
           )}
         </div>
-      </div>
-
-      <div>
-        <label
-          htmlFor="subject"
-          className="block mb-2 text-sm font-medium text-gray-900 "
-        >
-          Tu Asunto
-        </label>
-        <input
-          type="subject"
-          id="subject"
-          className="shadow-sm bg-violet-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5 placeholder:text-violet-500"
-          placeholder="name@developez.es"
-          {...register("subject", {
-            required: {
-              value: true,
-              message: "Tienes que poner tu asunto",
-            },
-          })}
-        />
-        {errors.subject && (
-          <span className="text-red-500 text-xs">{errors.subject.message}</span>
-        )}
       </div>
       <div className="sm:col-span-2">
         <label
@@ -154,7 +124,6 @@ function ContactForm() {
       </div>
     </form>
   );
-
 }
 
 export default ContactForm;
