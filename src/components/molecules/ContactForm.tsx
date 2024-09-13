@@ -21,7 +21,7 @@ function ContactForm() {
   const sendEmail = () => {
    if (form.current!== null) {
       emailjs
-       .sendForm("service_cd973sj", "template_w6zwq1w", form.current, "mrjaIJyXMGp2egXcH")
+       .sendForm("service_u9valm3", "template_c78bg4m", form.current, "EToqoiwQleMd4DadZ")
        .then((result) => {
           console.log(result.text);
           location.reload()

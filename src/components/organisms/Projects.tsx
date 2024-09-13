@@ -86,7 +86,7 @@ function Projects() {
       title: "Crud News",
       description: "Pagina de noticias implementando CRUD en base de datos",
       link: "",
-      image: "",
+      image: "/next-crud.png",
       tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
       className: "text-black",
       backgroundImage: "",

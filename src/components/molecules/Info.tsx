@@ -29,10 +29,10 @@ function Info() {
     >
       {/* Imagen */}
       <div className="md:flex md:flex-col md:gap-2">
-        <div className=" size-36  relative -top-10 left-5 md:static md:self-center xl:relative xl:-top-24  xl:left-1 xl:size-44 ">
+        <div className=" size-36  relative -top-10 left-5 md:static md:self-center xl:relative xl:-top-24  xl:left-1 xl:w-44 xl:h-30 ">
           <img
             className="rounded-xl"
-            src="https://avatars.githubusercontent.com/u/123985275?v=4"
+            src="/profile_img.png"
           />
         </div>
         <div className="xl:flex xl:flex-col xl:justify-center xl:items-center xl:gap-2 xl:-mt-10">
