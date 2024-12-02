@@ -7,6 +7,9 @@ import { GiBearFace } from "react-icons/gi";
 import { DiMysql } from "react-icons/di";
 import CardProject from "../atoms/CardProjectItem";
 import Section from "../molecules/Section";
+import { Carousel } from "flowbite-react";
+
+
 function Projects() {
   const TAGS = {
     NEXT: {
@@ -82,41 +85,85 @@ function Projects() {
       className: "text-white",
       backgroundImage: "",
       key: "prj2",
-    }, {
-      title: "Crud News",
-      description: "Pagina de noticias implementando CRUD en base de datos",
-      link: "",
-      image: "/next-crud.png",
-      tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
+    },
+    //, {
+    //   title: "Crud News",
+    //   description: "Pagina de noticias implementando CRUD en base de datos",
+    //   link: "",
+    //   image: "/next-crud.png",
+    //   tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
+    //   className: "text-black",
+    //   backgroundImage: "",
+    //   key: "prj3",
+    // },
+    {
+      title: "Pinturas Fepama",
+      description: "Web de la empresa Fepama",
+      link: "https://pinturasfepama.es/",
+      image: "/fepama.webp",
+      tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.WORDPRESS],
       className: "text-black",
       backgroundImage: "",
-      key: "prj3",
+      key: "prj4",
     },
-   
+    {
+      title: "Gualoga",
+      description: "Web de la empresa Gualoga",
+      // link: "https://pinturasfepama.es/",
+      image: "/gualoga.webp",
+      tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.WORDPRESS],
+      className: "text-black",
+      backgroundImage: "",
+      key: "prj5",
+    },
+    {
+      title: "Grupo Alvera",
+      description: "Web de la empresa Grupo Alvera",
+      // link: "https://pinturasfepama.es/",
+      image: "/alvera.webp",
+      tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.WORDPRESS],
+      className: "text-black",
+      backgroundImage: "",
+      key: "prj6",
+    }
+
+
   ];
+
+
   return (
-    <Section title="Proyectos">
-<div className="mt-4 grid grid-cols-auto-fill-300  gap-4 lg:justify-center md:p-8 lg:pb-24 bg-blue-100 rounded-lg" >
-      {proyectos.map(
-        ({ title, description, link, github, image, tags, className, key }) => (
-          <div key={`project-id-${key}`}>
-            <CardProject
-              title={title}
-              description={description}
-              link={link}
-              github={github}
-              tags={tags}
-              image={image}
-              className={className}
-              key={key}
-            />
-          </div>
-        )
-      )}
-    </div>
-    
+    <Section title="Proyectos" className="h-[65vh] flex items-center justify-center">
+      <div className="w-full">
+
+      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+          <Carousel pauseOnHover>
+  
+        
+          {proyectos.map(
+            ({ title, description, link, github, image, tags, className, key }) => (
+              <div key={`project-id-${key}`} className="h-full">
+                <CardProject
+                  title={title}
+                  description={description}
+                  link={link}
+                  github={github}
+                  tags={tags}
+                  image={image}
+                  className={className}
+                  key={key}
+                />
+              </div>
+            )
+          )}
+          </Carousel>
+        </div>
+      </div>
+     
+ 
+      
+     
     </Section>
-    
+
   );
 }
 

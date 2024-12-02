@@ -18,14 +18,14 @@ function Info() {
     },
     {
       id: 3,
-      text: "Rubi,Barcelona",
+      text: "Barcelona",
       icon: <FaLocationDot />,
     },
   ];
   return (
     <div
       className="w-full h-[50vh] flex flex-col items-center p-4 relative md:flex-row md:items-start md:justify-center md:gap-4 md:h-fit xl:flex-col 
-    xl:items-center xl:h-fit xl:justify-self-center"
+    xl:items-center xl:h-fit xl:justify-self-start "
     >
       {/* Imagen */}
       <div className="md:flex md:flex-col md:gap-2">
@@ -37,9 +37,9 @@ function Info() {
         </div>
         <div className="xl:flex xl:flex-col xl:justify-center xl:items-center xl:gap-2 xl:-mt-10">
           <h2 className="text-xl md:text-xl">Jennifer Lopez</h2>
-          <span className="bg-blue-200 text-xs w-fit rounded-full py-1 px-2 mx-auto md:text-sm">
+          {/* <span className="bg-blue-200 text-xs w-fit rounded-full py-1 px-2 mx-auto md:text-sm">
             FullStack Developer
-          </span>
+          </span> */}
           <div className="flex justify-center gap-3 mt-2">
             <a target="_blank" className="text-black md:text-xl" href="https://github.com/jenDevelopez">
               <ImGithub />
@@ -58,7 +58,7 @@ function Info() {
       {/* Info */}
 
       <div className="flex flex-col gap-2 justify-center md:flex-row">
-        <div className="text-sm mt-4 flex flex-col gap-4  px-2 py-4 bg-violet-200 rounded-2xl">
+        <div className="text-sm mt-4 flex flex-col gap-4  px-2 py-4 bg-red-700  rounded-2xl">
           {dataInfoItems.map(({ text, icon, id }) => (
             <InfoDataItem key={id} text={text} icon={icon} />
           ))}

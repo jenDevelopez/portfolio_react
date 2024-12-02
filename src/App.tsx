@@ -10,28 +10,30 @@ import Aside from "./components/molecules/Aside";
 function App() {
   const { content, setOpenNav, openNav } = useMyContext();
 
+
+
   return (
+
     <div
-      className={` bg-[url('../public/18129294.webp')] bg-cover bg-center w-full xl:h-screen xl:grid xl:place-items-center relative `}
+      className={`bg-slate-200 bg-cover  bg-center w-full xl:h-screen xl:grid xl:place-items-center relative `}
     >
       <div
-        className="
+        className=" bg-slate-200
     flex flex-col justify-between items-center gap-10 w-full  p-4  
     md:justify-evenly
-    xl:flex-row xl:justify-between xl:items-start xl:gap-20 xl:mt-36 xl:w-[95%] 
+    xl:flex-row xl:justify-between xl:items-start xl:gap-20  xl:w-[95%] 
     "
       >
         <Aside />
-        <div className="bg-white/60 w-full rounded-lg p-4 gap-4 xl:h-full xl:flex xl:flex-col xl:justify-around xl:gap-4">
-          <header className="flex justify-between items-center">
-            <h1 className="font-bold text-4xl  lg:ml-12 md:after:w-40 md:after:h-1 md:after:bg-violet-500 md:after:inline-block md:after:ml-2 md:after:mb-2">
+        <div className="bg-white/50 w-full rounded-lg p-4 gap-4 xl:h-full xl:flex xl:flex-col xl:justify-around xl:gap-4">
+          <header className="flex justify-between items-center opacity-100">
+            <h1 className="font-bold text-4xl  lg:ml-12 md:after:w-40 md:after:h-1 md:after:bg-red-700 md:after:inline-block md:after:ml-2 md:after:mb-2">
               Portfolio
             </h1>
             <span
               className={`
-          bg-sky-500 py-2 px-4 rounded-full cursor-pointer ${
-            openNav && "opacity-0 ease-in duration-500"
-          }
+          bg-red-700 text-white py-2 px-4 rounded-full cursor-pointer ${openNav && "opacity-0 ease-in duration-500"
+                }
           md:hidden
           `}
               onClick={() => setOpenNav(true)}
@@ -49,7 +51,7 @@ function App() {
 
         <Navbar />
       </div>
-     
+
     </div>
   );
 }

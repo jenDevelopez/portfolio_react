@@ -4,8 +4,8 @@ import Info from "./Info";
 function Aside() {
   const { openNav } = useMyContext();
   return (
-    <aside className={`
-    bg-purple-100 rounded-xl fixed top-[4.5rem]
+    <aside className={` h-full
+    bg-white/90 rounded-xl fixed 
     ${openNav ? 'right-4' : '-right-full'}
     ease-linear duration-300 z-[99]
     md:static 

@@ -3,14 +3,14 @@ export const stack = [
   {
     title: "Frontend",
     content:
-      "Realizo aplicaciones en el entorno de cliente, manejo desde aplicaciones estáticas con  Html5,ccs, y javascript puro o con frameworks como Astro a aplicaciones dinámicas con react, o con php",
+      "Realizo aplicaciones en el entorno de cliente, manejo desde aplicaciones estáticas con  Html5, ccs, y javascript puro o con frameworks como Astro a aplicaciones dinámicas con react, o con php",
   
   },
-  {
-    title: "Backend",
-    content:
-      "Creación y manejo de bases de datos con MySQL, creacion de API Rest",
-  },
+  // {
+  //   title: "Backend",
+  //   content:
+  //     "Creación y manejo de bases de datos con MySQL, creacion de API Rest",
+  // },
 ];
 
 export const educacion = [

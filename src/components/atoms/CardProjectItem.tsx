@@ -1,4 +1,5 @@
 import { FaLink,FaGithub } from 'react-icons/fa6'
+
 interface Tag{
   name:string,
   class:string,
@@ -14,11 +15,11 @@ interface Props {
   key:string
   tags:Tag[]
 }
-
+// 
 function CardProject({ title, description, link, github, image, tags, className }: Props) {
   return (
-    <article className={`w-full h-80 bg-cover ${className} relative group border-2 border-gray-400 rounded-lg`} >
-    <div className="w-full h-full bg-cover bg-center absolute top-0 group-hover:opacity-50 " style={{backgroundImage:`url(${image})`}}></div>
+    <article className={`w-full h-full  ${className} relative group border-2 border-gray-400 rounded-lg`} >
+    <div className={`w-full h-full bg-cover bg-center  absolute top-0 group-hover:opacity-50 `} style={{backgroundImage:`url(${image})`}} ></div>
     <div className=" w-full h-full  opacity-0 hover:opacity-100 p-4 hover:z-10 absolute top-0 flex flex-col justify-center gap-4 ">
       <h2 className="font-bold text-lg">{title}</h2>
       <p>{description}</p>
