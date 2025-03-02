@@ -6,8 +6,10 @@ import Navbar from "./components/molecules/Navbar";
 import useMyContext from "./hooks/useMyContext";
 
 import Aside from "./components/molecules/Aside";
+
 function App() {
   const { content, setOpenNav, openNav } = useMyContext();
+<<<<<<< HEAD
   return (
     <div className="bg-purple-200"
       // className={` bg-[url('../public/18129294.webp')] bg-cover bg-center w-full h-screen  lg:grid lg:place-items-center relative `}
@@ -32,13 +34,33 @@ function App() {
           `}>
           <header className="flex justify-between items-center">
             <h1 className="font-bold text-4xl  lg:ml-12 md:after:w-40 md:after:h-1 md:after:bg-violet-500 md:after:inline-block md:after:ml-2 md:after:mb-2">
+=======
+
+
+
+  return (
+
+    <div
+      className={`bg-slate-200 bg-cover  bg-center w-full xl:h-screen xl:grid xl:place-items-center relative `}
+    >
+      <div
+        className=" bg-slate-200
+    flex flex-col justify-between items-center gap-10 w-full  p-4  
+    md:justify-evenly
+    xl:flex-row xl:justify-between xl:items-start xl:gap-20  xl:w-[95%] 
+    "
+      >
+        <Aside />
+        <div className="bg-white/50 w-full rounded-lg p-4 gap-4 xl:h-full xl:flex xl:flex-col xl:justify-around xl:gap-4">
+          <header className="flex justify-between items-center opacity-100">
+            <h1 className="font-bold text-4xl  lg:ml-12 md:after:w-40 md:after:h-1 md:after:bg-red-700 md:after:inline-block md:after:ml-2 md:after:mb-2">
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
               Portfolio
             </h1>
             <span
               className={`
-          bg-sky-500 py-2 px-4 rounded-full cursor-pointer ${
-            openNav && "opacity-0 ease-in duration-500"
-          }
+          bg-red-700 text-white py-2 px-4 rounded-full cursor-pointer ${openNav && "opacity-0 ease-in duration-500"
+                }
           md:hidden
           `}
               onClick={() => setOpenNav(true)}
@@ -56,7 +78,11 @@ function App() {
 
         <Navbar />
       </div>
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
     </div>
   );
 }

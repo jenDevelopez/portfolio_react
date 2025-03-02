@@ -7,7 +7,7 @@ function LinkNav({name,icon}: PropsLinkNav) {
   const {setContent,content} = useMyContext();
 
   return (
-    <button className={`size-12 grid place-items-center rounded-md ${content === name && 'bg-blue-500 '}`} onClick={() => setContent(name)}>
+    <button className={`size-12 grid place-items-center rounded-md ${content === name && 'bg-red-700 '}`} onClick={() => setContent(name)}>
         <span className={`text-black text-2xl ${content === name && 'text-white'} `} >
           {icon}
         </span>

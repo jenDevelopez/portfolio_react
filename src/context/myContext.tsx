@@ -19,7 +19,8 @@ export const MyContext = createContext<StateContextType>({
   setOpenNav:()=>{}
   ,
   isSending:false,
-  setIsSending:()=>{}
+  setIsSending:()=>{},
+
   
 
 });
@@ -27,6 +28,9 @@ export const MyContext = createContext<StateContextType>({
 export const MyProvider = ({ children }: ProviderProps) => {
   const [content,setContent] = useState('about')
   const [openNav,setOpenNav] = useState(false)
+
+
+
   return (
     <MyContext.Provider
       value={{

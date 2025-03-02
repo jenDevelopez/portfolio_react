@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 const flowbite = require("flowbite-react/tailwind");
+<<<<<<< HEAD
+=======
+
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
 export default {
   content: [
     "./index.html",
@@ -14,6 +18,10 @@ export default {
     },
   },
   plugins: [
+<<<<<<< HEAD
     flowbite.plugin(),
+=======
+    flowbite.plugin()
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
   ],
 }

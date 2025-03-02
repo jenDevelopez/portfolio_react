@@ -2,13 +2,18 @@ export const stack = [
   {
     title: "Frontend",
     content:
+<<<<<<< HEAD
       "Realizo aplicaciones en el entorno de cliente, manejo desde aplicaciones estáticas con  Html5,ccs, y javascript puro o con frameworks como Astro a aplicaciones dinámicas con react, o con php",
+=======
+      "Realizo aplicaciones en el entorno de cliente, manejo desde aplicaciones estáticas con  Html5, ccs, y javascript puro o con frameworks como Astro a aplicaciones dinámicas con react, o con php",
+  
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
   },
-  {
-    title: "Backend",
-    content:
-      "Creación y manejo de bases de datos con MySQL, creacion de API Rest",
-  },
+  // {
+  //   title: "Backend",
+  //   content:
+  //     "Creación y manejo de bases de datos con MySQL, creacion de API Rest",
+  // },
 ];
 
 export const educacion = [
@@ -83,7 +88,18 @@ export const skills = [
     progress: "70%",
   },
   {
+<<<<<<< HEAD
     name: "Wordpress",
     progress: "80%",
   },
 ];
+=======
+    name: 'Node',
+    progress: '20%'
+  }
+
+]
+
+
+
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
