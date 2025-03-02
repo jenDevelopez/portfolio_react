@@ -8,9 +8,9 @@ Soy Jennifer, una desarrolladora web apasionada por crear experiencias digitales
 
 ## Proyectos
 
-### Web anima animalos
+### Web anima animalis
 
-![Captura de la web realizada para ánima animalis](/anima-animalis.webp)
+![Captura de la web realizada para ánima animalis](/public/anima-animalis.webp)
 
 * **Descripción:** Web dinámica realizada en wordpress, con css3.
 * **Tecnologías:** HTML5,CSS3,Wordpress.
@@ -18,7 +18,7 @@ Soy Jennifer, una desarrolladora web apasionada por crear experiencias digitales
 
 ### Star wars Starships
 
-![Captura de la app Star wars Starships](/star_wars.webp)
+![Captura de la app Star wars Starships](/public/star_wars.webp)
 
 * **Descripción:** App web dinámica que recoge datos de la api de star wars y trae datos sobre las naves espaciales, los pilotos y otros datos.
 * **Tecnologías:** ReactJs, Tailwind, Zustand, Firebase.
