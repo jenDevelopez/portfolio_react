@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# Mi Portafolio de Desarrollo Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido/a a mi portafolio de desarrollo web! Aquí encontrarás una colección de mis proyectos y trabajos más recientes.
 
-Currently, two official plugins are available:
+## Acerca de mí
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Soy Jennifer, una desarrolladora web apasionada por crear experiencias digitales atractivas y funcionales. Me especializo en desarrollo frontend transicionando a fullStack.
 
-## Expanding the ESLint configuration
+## Proyectos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Web anima animalos
 
-- Configure the top-level `parserOptions` property like this:
+![Captura de la web realizada para ánima animalis](/anima-animalis.webp)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+* **Descripción:** Web dinámica realizada en wordpress, con css3.
+* **Tecnologías:** HTML5,CSS3,Wordpress.
+* **Enlace:** [Enlace a la web de ánima animalis](https://animaanimalis.es/).
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Star wars Starships
+
+![Captura de la app Star wars Starships](/star_wars.webp)
+
+* **Descripción:** App web dinámica que recoge datos de la api de star wars y trae datos sobre las naves espaciales, los pilotos y otros datos.
+* **Tecnologías:** ReactJs, Tailwind, Zustand, Firebase.
+* **Enlace:** [Repositorio en Github del proyecto](https://github.com/jenDevelopez/star-wars).
+
+
+
+## Habilidades
+
+* **Lenguajes de programación:** HTML,CSS,PHP,Javascript,C#.
+* **Frameworks y librerías:** ReactJS,Tailwind,Bootstrap,Astro.
+* **Herramientas:** VSCode.
+* **Otros:** Responsive Design, Atomic Design.
+
+## Contacto
+
+* **LinkedIn:** [Perfil de linkedin](https://www.linkedin.com/in/jendevelopez/)
+* **Sitio web personal:** [Web del portfolio](https://www.jendevelopez.es)
+
+## ¡Gracias por visitar mi portfolio!
+
