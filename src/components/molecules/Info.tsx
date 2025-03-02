@@ -11,12 +11,16 @@ function Info() {
   const { setOpenNav } = useMyContext();
   const dataInfoItems = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
       id: 1,
       text: "643563653",
       icon: <IoPhonePortraitSharp />,
       linkType:'tel:'
     },
+=======
+   
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
 =======
    
 >>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
@@ -35,6 +39,7 @@ function Info() {
   return (
     <div
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="w-full h-[50vh] flex flex-col items-center p-4 relative md:flex-row md:items-start md:justify-center md:gap-4 md:h-fit xl:flex-col xl:items-center xl:h-fit xl:justify-self-center"
     >
       {/* Imagen */}
@@ -43,6 +48,17 @@ function Info() {
           <img
             className="rounded-xl"
             src="/me.webp"
+=======
+      className="w-full h-[50vh] flex flex-col items-center p-4 relative md:flex-row md:items-start md:justify-center md:gap-4 md:h-fit xl:flex-col 
+    xl:items-center xl:h-fit xl:justify-self-start "
+    >
+      {/* Imagen */}
+      <div className="md:flex md:flex-col md:gap-2">
+        <div className=" size-36  relative -top-10 left-5 md:static md:self-center xl:relative xl:-top-24  xl:left-1 xl:w-44 xl:h-30 ">
+          <img
+            className="rounded-xl"
+            src="/profile_img.png"
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
 =======
       className="w-full h-[50vh] flex flex-col items-center p-4 relative md:flex-row md:items-start md:justify-center md:gap-4 md:h-fit xl:flex-col 
     xl:items-center xl:h-fit xl:justify-self-start "
@@ -80,10 +96,13 @@ function Info() {
 
       <div className="flex flex-col gap-2 justify-center md:flex-row">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="text-sm mt-4 flex flex-col gap-4  px-2 py-4 bg-violet-200 rounded-2xl">
           {dataInfoItems.map(({ text, icon, id, linkType }) => (
             <InfoDataItem key={id} text={text} icon={icon} linkType={linkType} />
 =======
+=======
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
         <div className="text-sm mt-4 flex flex-col gap-4  px-2 py-4 bg-red-700  rounded-2xl">
           {dataInfoItems.map(({ text, icon, id }) => (
             <InfoDataItem key={id} text={text} icon={icon} />

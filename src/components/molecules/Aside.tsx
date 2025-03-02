@@ -10,10 +10,13 @@ function Aside() {
     ease-linear duration-300 z-[99]
     md:static 
 <<<<<<< HEAD
+<<<<<<< HEAD
     lg:h-fit lg:mt-10 lg:w-full lg:mx-auto
     xl:w-1/4 xl:mt-32
     2xl:mt-20
 =======
+=======
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
     xl:h-fit xl:mt-10 xl:w-1/4
     
 >>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7

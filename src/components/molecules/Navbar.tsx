@@ -36,8 +36,7 @@ function Navbar() {
     xl:w-fit xl:flex-col xl:static xl:h-1/2 xl:mt-52
 =======
     md:left-10 
-    xl:w-fit xl:flex-col xl:static xl:h-1/2 
->>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
+    lg:w-fit lg:flex-col lg:static lg:h-1/2 
 
     "
     >

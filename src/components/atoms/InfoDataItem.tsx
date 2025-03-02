@@ -7,11 +7,15 @@ function InfoDataItem({ text, icon,linkType }: PropsInfoDataItem) {
         {icon}
       </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {!linkType ? (
         <p>{text}</p>
       ): (
         <a href={`${linkType}${text}`}>{text}</a>
       )}
+=======
+      <p className="text-white">{text}</p>
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
 =======
       <p className="text-white">{text}</p>
 >>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7

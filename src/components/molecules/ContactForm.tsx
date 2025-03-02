@@ -1,9 +1,12 @@
 import { useForm } from "react-hook-form";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FormDataProps } from "../../types";
 
 
 =======
+=======
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 

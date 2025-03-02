@@ -16,7 +16,10 @@
     "@types/nodemailer": "^6.4.14",
     "flowbite-react": "^0.10.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "nodemailer": "^6.9.13",
+=======
+>>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
 =======
 >>>>>>> c458dec0fe1a19c8ea73b5a6579c2ade4f2086d7
     "react": "^18.2.0",
