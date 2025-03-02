@@ -1,8 +1,6 @@
 import * as React from 'react';
+import { EmailTemplateProps } from '../../types';
 
-interface EmailTemplateProps {
-  firstName: string;
-}
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   firstName,

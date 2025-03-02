@@ -5,8 +5,14 @@ import { SiTailwindcss } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { GiBearFace } from "react-icons/gi";
 import { DiMysql } from "react-icons/di";
-import CardProject from "../atoms/CardProjectItem";
+import { SiJavascript } from "react-icons/si";
+import { SiJquery } from "react-icons/si";
+
+// import CardProject from "../atoms/CardProjectItem";
 import Section from "../molecules/Section";
+// import { Carousel } from "flowbite-react";
+import Carousel from "../atoms/Carousel";
+
 function Projects() {
   const TAGS = {
     NEXT: {
@@ -58,6 +64,16 @@ function Projects() {
       name: "MySQL",
       class: "bg-white text-blue-700",
       icon: <DiMysql />
+    },
+    JAVSCRIPT: {
+      name: "Javascript",
+      class: "bg-yellow-300 text-white-700",
+      icon: <SiJavascript />
+    },
+    JQUERY: {
+      name: "jquery",
+      class: "bg-white text-blue-800",
+      icon: <SiJquery />
     }
   };
   const proyectos = [
@@ -65,9 +81,9 @@ function Projects() {
       title: "Anima Animalis",
       description: "Pagina dinamica con CMS a una clinica veterinaria",
       link: "https://animaanimalis.es/",
-      image: "/anima-animalis.png",
+      image: "/anima-animalis.webp",
       tags: [TAGS.HTML, TAGS.CSS, TAGS.WORDPRESS],
-      className: "text-gray-700",
+      className: "text-gray-700 left-0",
       backgroundImage: "",
       key: "prj1",
     },
@@ -77,47 +93,32 @@ function Projects() {
         "Pagina de naves de Star Wars, con su informacion, pilotos y películas en la que aparecen",
       link: "https://star-wars-aplication.netlify.app",
       github: "https://github.com/jenDevelopez/star-wars/",
-      image: "/star_wars.png",
+      image: "/star_wars.webp",
       tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.ZUSTAND, TAGS.FIREBASE],
-      className: "text-white",
+      className: "text-white left-0",
       backgroundImage: "",
       key: "prj2",
-    }, {
-      title: "Crud News",
-      description: "Pagina de noticias implementando CRUD en base de datos",
-      link: "",
-      image: "",
-      tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
-      className: "text-black",
+    },
+    {
+      title: "Lleo XIII",
+      description:
+        "Página de la escuela Lleo XIII en Barcelona",
+      link: "https://lleoxiii.com",
+      image: "/lleoxiii.webp",
+      tags: [TAGS.HTML, TAGS.CSS,TAGS.JAVSCRIPT,TAGS.WORDPRESS,TAGS.JQUERY],
+      className: "text-white left-0",
       backgroundImage: "",
       key: "prj3",
-    },
-   
+    }
+
   ];
+
+
   return (
     <Section title="Proyectos">
-<div className="mt-4 grid grid-cols-auto-fill-300  gap-4 lg:justify-center md:p-8 lg:pb-24 bg-blue-100 rounded-lg" >
-      {proyectos.map(
-        ({ title, description, link, github, image, tags, className, key }) => (
-          <div key={`project-id-${key}`}>
-            <CardProject
-              title={title}
-              description={description}
-              link={link}
-              github={github}
-              tags={tags}
-              image={image}
-              className={className}
-              key={key}
-            />
-          </div>
-        )
-      )}
-    </div>
-    
+      <Carousel listProjects={proyectos} />
     </Section>
-    
-  );
+  )
 }
 
 export default Projects;

@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { FormDataProps } from "../../types";
 
-interface FormDataProps {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+
 
 function ContactForm() {
   const {

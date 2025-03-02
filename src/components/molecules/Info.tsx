@@ -12,13 +12,15 @@ function Info() {
   const dataInfoItems = [
     {
       id: 1,
-      text: "652176302",
+      text: "643563653",
       icon: <IoPhonePortraitSharp />,
+      linkType:'tel:'
     },
     {
       id: 2,
       text: "jendevelopez@hotmail.com",
       icon: <IoIosMailOpen />,
+      linkType:'mailto:'
     },
     {
       id: 3,
@@ -28,18 +30,17 @@ function Info() {
   ];
   return (
     <div
-      className="w-full h-[50vh] flex flex-col items-center p-4 relative md:flex-row md:items-start md:justify-center md:gap-4 md:h-fit lg:flex-col 
-    lg:items-center lg:h-fit lg:justify-self-center"
+      className="w-full h-[50vh] flex flex-col items-center p-4 relative md:flex-row md:items-start md:justify-center md:gap-4 md:h-fit xl:flex-col xl:items-center xl:h-fit xl:justify-self-center"
     >
       {/* Imagen */}
       <div className="md:flex md:flex-col md:gap-2">
-        <div className=" size-36  relative -top-10 left-5 md:static md:self-center lg:relative lg:-top-24  lg:left-1 lg:size-44 ">
+        <div className=" size-36  relative -top-10 left-5 md:static md:self-center xl:relative xl:-top-24  xl:left-1 xl:size-44 ">
           <img
             className="rounded-xl"
-            src="https://avatars.githubusercontent.com/u/123985275?v=4"
+            src="/me.webp"
           />
         </div>
-        <div className="lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-2 lg:-mt-10">
+        <div className="xl:flex xl:flex-col xl:justify-center xl:items-center xl:gap-2 xl:-mt-10">
           <h2 className="text-xl md:text-xl">Jennifer Lopez</h2>
           <span className="bg-blue-200 text-xs w-fit rounded-full py-1 px-2 mx-auto md:text-sm">
             FullStack Developer
@@ -60,8 +61,8 @@ function Info() {
 
       <div className="flex flex-col gap-2 justify-center md:flex-row">
         <div className="text-sm mt-4 flex flex-col gap-4  px-2 py-4 bg-violet-200 rounded-2xl">
-          {dataInfoItems.map(({ text, icon, id }) => (
-            <InfoDataItem key={id} text={text} icon={icon} />
+          {dataInfoItems.map(({ text, icon, id, linkType }) => (
+            <InfoDataItem key={id} text={text} icon={icon} linkType={linkType} />
           ))}
         </div>
       </div>

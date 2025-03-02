@@ -1,14 +1,16 @@
-interface Props {
-  text: string
-  icon: JSX.Element
-}
-function InfoDataItem({ text, icon }: Props) {
+import { PropsInfoDataItem } from "../../types"
+
+function InfoDataItem({ text, icon,linkType }: PropsInfoDataItem) {
   return (
     <div className="flex items-center justify-start gap-2 md:text-lg lg:text-base">
       <span className="text-lg p-2 bg-sky-100 rounded-lg ">
         {icon}
       </span>
-      <p>{text}</p>
+      {!linkType ? (
+        <p>{text}</p>
+      ): (
+        <a href={`${linkType}${text}`}>{text}</a>
+      )}
     </div>
   )
 }

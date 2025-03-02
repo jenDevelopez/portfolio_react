@@ -6,39 +6,38 @@ import { TiContacts } from "react-icons/ti";
 
 import LinkNav from "../atoms/LinkNav";
 
-
-
 function Navbar() {
-
   const navButtons = [
     {
-      name:'about',
-      icon:<FaUserTie />
+      name: "about",
+      icon: <FaUserTie />,
     },
     {
-      name:'resume',
-      icon:<IoDocumentTextOutline />
+      name: "resume",
+      icon: <IoDocumentTextOutline />,
     },
     {
-      name:'projects',
-      icon:<FaBriefcase />
+      name: "projects",
+      icon: <FaBriefcase />,
     },
     {
-      name:'contact',
-      icon: <TiContacts />
-    }
-  ]
+      name: "contact",
+      icon: <TiContacts />,
+    },
+  ];
 
   return (
-    <nav className="
+    <nav
+      className=" fixed bottom-0 left-0
      w-full p-4 bg-white rounded-xl flex justify-around items-center shadow-md
    
-    md:left-10 
-    lg:w-fit lg:flex-col lg:static lg:h-1/2 
+    
+    xl:w-fit xl:flex-col xl:static xl:h-1/2 xl:mt-52
 
-    ">
-      {navButtons.map(({name,icon}) => (
-        <LinkNav key={`btn-${name}`} name={name} icon={icon}/>
+    "
+    >
+      {navButtons.map(({ name, icon }) => (
+        <LinkNav key={`btn-${name}`} name={name} icon={icon} />
       ))}
     </nav>
   );

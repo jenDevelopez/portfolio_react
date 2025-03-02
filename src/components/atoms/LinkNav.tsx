@@ -1,11 +1,9 @@
 
 import useMyContext from '../../hooks/useMyContext'
-interface Props {
- name:string
- icon:JSX.Element
-}
+import { PropsLinkNav } from '../../types';
 
-function LinkNav({name,icon}: Props) {
+
+function LinkNav({name,icon}: PropsLinkNav) {
   const {setContent,content} = useMyContext();
 
   return (

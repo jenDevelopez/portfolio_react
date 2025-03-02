@@ -1,23 +1,10 @@
 import { FaLink,FaGithub } from 'react-icons/fa6'
-interface Tag{
-  name:string,
-  class:string,
-  icon:JSX.Element
-}
-interface Props {
-  title:string,
-  description:string,
-  link?:string,
-  github?:string,
-  image:string, 
-  className:string, 
-  key:string
-  tags:Tag[]
-}
+import { PropsCardProject } from '../../types';
 
-function CardProject({ title, description, link, github, image, tags, className }: Props) {
+
+function CardProject({ title, description, link, github, image, tags, className }: PropsCardProject) {
   return (
-    <article className={`w-full h-80 bg-cover ${className} relative group border-2 border-gray-400 rounded-lg`} >
+    <article className={`z-10 w-10/12 mx-auto h-full bg-cover ${className} relative group border-2 border-gray-400 rounded-lg`} >
     <div className="w-full h-full bg-cover bg-center absolute top-0 group-hover:opacity-50 " style={{backgroundImage:`url(${image})`}}></div>
     <div className=" w-full h-full  opacity-0 hover:opacity-100 p-4 hover:z-10 absolute top-0 flex flex-col justify-center gap-4 ">
       <h2 className="font-bold text-lg">{title}</h2>
@@ -41,7 +28,7 @@ function CardProject({ title, description, link, github, image, tags, className 
           </a>
         )}
         {link && (
-          <a href={link}>
+          <a href={link} target='_blank'>
             <FaLink className="size-5 text-blue-500" />
           </a>
         )}
